@@ -1,18 +1,70 @@
-# Getting Started with Create React App
+# YouTube to MP3 Downloader
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web app to convert YouTube videos to MP3 audio files. Built with React (frontend) and Node.js/Express (backend) using yt-dlp and ffmpeg for audio extraction.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### 1. Clone the repository
+```bash
+git clone https://github.com/Jeffrin2005/Youtube_To_MP3_Downloader.git
+cd Youtube_To_MP3_Downloader
+```
 
-### `npm start`
+### 2. Install dependencies (root directory)
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. Install backend dependencies (if not already)
+```bash
+cd server
+npm install
+cd ..
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 4. Install yt-dlp (required for backend)
+- **Recommended:**
+  - Download the [yt-dlp binary](https://github.com/yt-dlp/yt-dlp/releases/latest) and place it in your PATH
+  - Or install via Python:
+    ```bash
+    pip install -U yt-dlp
+    ```
+
+### 5. Start the backend server
+```bash
+npm run server
+```
+- Runs on [http://localhost:8000](http://localhost:8000)
+
+### 6. Start the frontend React app (in a new terminal)
+```bash
+npm start
+```
+- Runs on [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Usage
+- Enter a YouTube video URL and click "Convert to MP3".
+- Wait for the progress bar to complete.
+- Download the MP3 file when ready.
+
+---
+
+## Tech Stack
+- **Frontend:** React, Tailwind CSS
+- **Backend:** Node.js, Express, ytdl-core, youtube-dl-exec (yt-dlp), fluent-ffmpeg, ffmpeg-static, sanitize-filename
+
+---
+
+## Notes
+- Make sure `yt-dlp` is installed and available in your system PATH for the backend to work.
+- FFmpeg is bundled via `ffmpeg-static`.
+
+---
+
+## License
+MIT
 
 ### `npm test`
 
